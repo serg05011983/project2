@@ -1,9 +1,9 @@
-from typing import Union
+from typing import Union, Any
 
 
 def filter_by_state(
-    spisok_data_: Union[list[dict[str, int]]], state_: str = "EXECUTED"
-) -> list[dict[str, int]]:
+    spisok_data_: Union[list[dict[Any, Any]]], state_: str = "EXECUTED"
+) -> list[dict[Any, Any]]:
     """Функция выполняет фильтрацию данных по принимаемому ключу"""
     spisok_data_filtered = []
     for dat in spisok_data_:
@@ -13,8 +13,8 @@ def filter_by_state(
 
 
 def sort_by_date(
-    spisok_data_: Union[list[dict[str, int]]], reverse_: bool = True
-) -> list[dict[str, int]]:
+    spisok_data_: Union[list[dict[Any, Any]]], reverse_: bool = True
+) -> list[dict[Any, Any]]:
     """Функция выполняет сортировку принимаемого списка словарей по дате"""
     sorted_spisok = sorted(
         spisok_data_, key=lambda spisok_data_: spisok_data_["date"], reverse=reverse_
