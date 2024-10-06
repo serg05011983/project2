@@ -19,8 +19,8 @@ def get_date(date_: str) -> str:
     return date_modify
 
 
-account_data = input("Введите аккаунт:  ")
-date = input("Введите : дату в формате 2024-03-11T02:26:18.671407:  ")
+#account_data = input("Введите аккаунт:  ")
+#date = input("Введите : дату в формате 2024-03-11T02:26:18.671407:  ")
 
-print(mask_account_card(account_data))
-print(get_date(date))
+#print(mask_account_card(account_data))
+#print(get_date(date))
