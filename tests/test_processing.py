@@ -1,6 +1,8 @@
-import pytest
-from src.processing import filter_by_state, sort_by_date
 from typing import Any, Union
+
+import pytest
+
+from src.processing import filter_by_state, sort_by_date
 
 
 @pytest.mark.parametrize(
