@@ -22,6 +22,8 @@ pip install -r requirements.txt
 2. Функции маскирования карты и счёта пользователя get_mask_account, get_mask_card_number находятся в модуле src/masks.py
 3. Функции наложения маски на номер карты/счёта mask_account_card и форматирования даты get_date находятся в модуле src/widget.py
 4. Функции фильтрации данных по ключу filter_by_state и сортировки словарей sort_by_date находятся в модуле src/processing.py
+5. Функции выборки требуемых транзакций по заданной валюте filter_by_currency, вывода банковских операций transactions_description и генерации номеров карт в заданном диапазоне card_number_generator находятся в модуле generators.py
+6. В модуле дата содержатся примеры данных для тестирования
 
 ## Тестирование
 
