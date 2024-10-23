@@ -1,3 +1,10 @@
+# from decorators import log
+# from typing import Any
+import random
+
+# from data.transactions_data import transactions
+
+
 def filter_by_currency(transactions_, tiker):
     "функция выдаёт из принимаемого словаря транзакции в заданной валюте"
     enable_tiker = ["RUB", "USD", "EURO", "CNY", "BTC", "TUGRIK"]
@@ -40,6 +47,15 @@ def num_card_formatter(s: str) -> str:
     return s[0:4] + " " + s[4:8] + " " + s[8:12] + " " + s[12:]
 
 
+def border_generator():
+    """функция возвращает нижнюю границу для генератора карт"""
+    low_border = 0
+    while len(str(low_border)) < 16:
+        low_border = random.randint(0000000000000000, 9999999999999999)
+    #    low_border = 0x234f
+    return low_border
+
+
 def card_number_generator(start_: int = 1, finish=9999999999999999) -> str:
     """функция возвращает номера карт из заданного пользователем диапазона"""
     i = start_
@@ -48,13 +64,11 @@ def card_number_generator(start_: int = 1, finish=9999999999999999) -> str:
         i += 1
 
 
-# for card_number in card_number_generator(3330000000000000, 3330000000000012):
-#    print(card_number)
-
 # usd_transactions = filter_by_currency(transactions, "USD")
 # for _ in range(3):
 #    print(next(usd_transactions))
 
-# descriptions = transaction_descriptions(transactions)
+
+#    descriptions = transaction_descriptions(transactions)
 # for _ in range(5):
-#    print(next(descriptions))
+#       print(next(descriptions))

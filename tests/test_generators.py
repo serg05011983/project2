@@ -1,7 +1,5 @@
 import random
-
 import pytest
-
 from data.transactions_data import transactions
 from src.generators import card_number_generator, filter_by_currency, num_card_formatter, transaction_descriptions
 
@@ -45,12 +43,12 @@ def low_border_generator():
 def test_card_number_generator(low_border_generator):
     """функция теста генератора карт проверяет правильность генерации карт и граничные случаи
     для рандомной генерации диапазонов"""
-    card_generator = card_number_generator(low_border_generator, low_border_generator + 8)
+    card_gender = card_number_generator(low_border_generator, low_border_generator + 8)
     i = low_border_generator
     print("\n" + f"нижняя граница диапазона low_border {i}")
     print(f"верхняя граница диапазона high_border {i + 8}")
     while i < low_border_generator + 8:
-        card = next(card_generator)
+        card = next(card_gender)
         assert card == num_card_formatter(str(i))
         assert len(card) == 19
         assert card[4] == " "
